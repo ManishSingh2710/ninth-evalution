@@ -105,8 +105,9 @@
           {{selectedData.title}}
         </div>
         <ul class="sublist p-2">
-          <li *ngFor="let subdata of selectedData.sublist">
-            {{subdata.name}}
+          <li *ngFor="let subdata of selectedData.sublist" class="d-flex align-items-center justify-content-between">
+            <div><i class="{{subdata.iconurl}}"></i> {{subdata.name}}</div>
+            <div *ngIf="subdata.qty > 0"><i class="fa fa-angle-right"></i></div>
           </li>
         </ul>
       </div>

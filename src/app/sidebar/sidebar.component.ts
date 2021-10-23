@@ -9,16 +9,6 @@ export class SidebarComponent implements OnInit {
 
   previousId = 1;
 
-  constructor() {
-    this.selectedData = this.listData[0];
-    console.log("selected ", this.selectedData);
-  }
-
-  ngOnInit(): void {
-
-  }
-
-
   listData: ListType[] = [
     {
       listId: 1,
@@ -27,13 +17,9 @@ export class SidebarComponent implements OnInit {
       sublist: [
         {
           name: "Apps",
-          qty: 10,
-          next: [
-            "Profile",
-            "Email",
-            "Calender",
-            "Shop"
-          ]
+          qty: 0,
+          next: [],
+          iconurl: "fa fa-mobile"
         },
       ]
     },
@@ -50,7 +36,8 @@ export class SidebarComponent implements OnInit {
             "Email",
             "Calender",
             "Shop"
-          ]
+          ],
+          iconurl: "fa fa-mobile"
         },
         {
           name: "Charts",
@@ -61,7 +48,8 @@ export class SidebarComponent implements OnInit {
             "Chartjs",
             "Chartlist",
             "Peity"
-          ]
+          ],
+          iconurl: "fa fa-opencart"
         }
       ],
     },
@@ -78,7 +66,8 @@ export class SidebarComponent implements OnInit {
             "Dark",
             "Mini Sidebar",
             "Sidebar"
-          ]
+          ],
+          iconurl: "fa fa-th-large"
         },
       ],
     },
@@ -95,7 +84,8 @@ export class SidebarComponent implements OnInit {
             "Dark",
             "Mini Sidebar",
             "Sidebar"
-          ]
+          ],
+          iconurl: "fa fa-bold"
         },
         {
           name: "Plugins",
@@ -105,17 +95,20 @@ export class SidebarComponent implements OnInit {
             "Dark",
             "Mini Sidebar",
             "Sidebar"
-          ]
+          ],
+          iconurl: "fa fa-plug"
         },
         {
           name: "Widget",
           qty: 0,
-          next: []
+          next: [],
+          iconurl: "fa fa-tag"
         },
         {
           name: "SVG Icon",
           qty: 0,
-          next: []
+          next: [],
+          iconurl: "fa fa-contao"
         },
       ],
     },
@@ -133,7 +126,8 @@ export class SidebarComponent implements OnInit {
             "Summernote",
             "Pickers",
             "Jquey Validate"
-          ]
+          ],
+          iconurl: "fa fa-wpforms"
         },
       ],
     },
@@ -145,12 +139,14 @@ export class SidebarComponent implements OnInit {
         {
           name: "Bootstrap",
           qty: 0,
-          next: []
+          next: [],
+          iconurl: "fa fa-bold"
         },
         {
           name: "Datatable",
           qty: 0,
-          next: []
+          next: [],
+          iconurl: "fa fa-table"
         },
       ],
     },
@@ -162,12 +158,14 @@ export class SidebarComponent implements OnInit {
         {
           name: "Register",
           qty: 0,
-          next: []
+          next: [],
+          iconurl: "fa fa-registered"
         },
         {
           name: "Login",
           qty: 0,
-          next: []
+          next: [],
+          iconurl: "fa fa-sign-in"
         },
         {
           name: "Error",
@@ -178,12 +176,14 @@ export class SidebarComponent implements OnInit {
             "Error 404",
             "Error 500",
             "Error 503",
-          ]
+          ],
+          iconurl: "fa fa-exclamation-circle"
         },
         {
           name: "Lock Screen",
           qty: 0,
-          next: []
+          next: [],
+          iconurl: "fa fa-lock"
         },
       ],
     },
@@ -192,16 +192,24 @@ export class SidebarComponent implements OnInit {
 
   selectedData: ListType;
 
+  constructor() {
+    this.selectedData = this.listData[0];
+    console.log("selected ", this.selectedData);
+  }
+
+  ngOnInit(): void {
+
+  }
+
   changeTab(value) {
-    let previousElement = document.getElementById(this.previousId.toString());
+    const previousElement = document.getElementById(this.previousId.toString());
     previousElement.classList.remove('active');
 
-    let selectedElement = document.getElementById(value);
+    const selectedElement = document.getElementById(value);
     selectedElement.classList.add('active');
-    this.previousId = value;
 
+    this.previousId = value;
     this.selectedData = this.listData[value - 1];
-    console.log("selected Data", this.selectedData, value)
   }
 }
 
@@ -216,5 +224,6 @@ export type ListType = {
 export type SubListType = {
   name: string,
   qty: number,
-  next: string[]
+  next: string[],
+  iconurl?: string
 }

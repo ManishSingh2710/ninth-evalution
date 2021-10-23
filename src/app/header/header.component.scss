@@ -28,6 +28,62 @@
     .header-content {
       padding: 0px 20px;
       width: calc(100% - 335px);
+
+      .searchbar {
+        input {
+          border-radius: 10px;
+          padding-left: 30px;
+          color: #181c32;
+          border: 1px solid #d7dae3;
+          font-weight: 500;
+          background-color: #ebeef6;
+        }
+
+        i {
+          left: 20px
+        }
+      }
+
+      .profile {
+        .img-content {
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        .profile-content {
+          span {
+            font-size: 16px;
+            font-weight: 500;
+          }
+
+          p {
+            margin-bottom: 0px;
+            font-size: 13px;
+          }
+        }
+
+        .notify {
+          margin-right: 10px;
+
+          a {
+            color: #464a53;
+            background-color: #ebeef6;
+            border-radius: 4px;
+          }
+        }
+      }
+
+      .right-toggler {
+        a {
+          color: #464a53 !important;
+        }
+      }
+
+      a:hover svg {
+        transform: scale(1.2);
+      }
     }
   }
 }

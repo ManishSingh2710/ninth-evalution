@@ -37,8 +37,6 @@
       }
     }
 
-
-
     .side-content {
       height: calc(100% - 80px);
       width: 255px;
@@ -54,8 +52,26 @@
         .sublist {
           list-style-type: none;
 
+          .fa {
+            font-size: 18px;
+            margin-right: 10px;
+          }
+
           li {
             padding: 10px 0px;
+            font-size: 15px;
+            color: #2d3240;
+            font-weight: 400;
+            cursor: pointer;
+          }
+
+          li:hover {
+            color: #3a7afe;
+          }
+
+          i {
+            font-size: 16px;
+            font-weight: 500;
           }
         }
       }
