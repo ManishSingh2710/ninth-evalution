@@ -1,0 +1,68 @@
+.sidebar-component {
+  position: fixed;
+  height: calc(100% - 80px);
+
+  .sidebar-container {
+    height: 100%;
+
+    .sidelist {
+      width: 80px;
+      background-color: #3a7afe;
+
+      .list {
+        list-style-type: none;
+        padding-left: 10px;
+        width: 100%;
+
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 55px;
+
+          svg {
+            color: white;
+          }
+        }
+
+        li.active {
+          background-color: white;
+          border-radius: 10px;
+          border-radius: 10px 0px 0px 10px;
+
+          svg {
+            color: #3a7afe !important;
+          }
+        }
+      }
+    }
+
+
+
+    .side-content {
+      height: calc(100% - 80px);
+      width: 255px;
+
+      .selected-panel {
+
+        .title {
+          font-size: 18px;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+
+        .sublist {
+          list-style-type: none;
+
+          li {
+            padding: 10px 0px;
+          }
+        }
+      }
+
+      .tab {
+        padding: 30px 30px;
+      }
+    }
+  }
+}

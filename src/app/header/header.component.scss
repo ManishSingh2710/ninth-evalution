@@ -1,0 +1,33 @@
+.header-component {
+  // box-shadow: 0px 0px 40px 0px rgb(82 63 105/ 20%) !important;
+
+  .header-container {
+    height: 80px;
+    background-color: #fff;
+
+    .logo {
+      width: 80px;
+      height: 100%;
+      background-color: #3a7afe;
+
+      img {
+        height: 48px;
+        width: 55px;
+      }
+    }
+
+    .sidenav {
+      width: 255px !important;
+
+      .title {
+        font-size: 28px;
+        font-weight: 500;
+      }
+    }
+
+    .header-content {
+      padding: 0px 20px;
+      width: calc(100% - 335px);
+    }
+  }
+}
