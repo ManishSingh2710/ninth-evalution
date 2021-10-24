@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SidebarComponent implements OnInit {
 
   previousId = 1;
-
+  name = "";
   listData: ListType[] = [
     {
       listId: 1,
@@ -189,12 +189,10 @@ export class SidebarComponent implements OnInit {
     },
 
   ]
-
   selectedData: ListType;
 
   constructor() {
     this.selectedData = this.listData[0];
-    console.log("selected ", this.selectedData);
   }
 
   ngOnInit(): void {
@@ -210,6 +208,13 @@ export class SidebarComponent implements OnInit {
 
     this.previousId = value;
     this.selectedData = this.listData[value - 1];
+  }
+
+  openlist(value) {
+    if (this.name == value)
+      this.name = "";
+    else
+      this.name = value;
   }
 }
 

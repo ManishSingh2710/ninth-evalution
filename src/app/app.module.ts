@@ -12,11 +12,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppComponent,
     HeaderComponent,
     SidebarComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,9 @@
+.header {
+  position: fixed;
+  width: 100%;
+}
 
+.main-panel {
+  padding-top: 80px;
+  height: 100%;
+}

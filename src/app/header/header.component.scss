@@ -1,5 +1,6 @@
 .header-component {
   // box-shadow: 0px 0px 40px 0px rgb(82 63 105/ 20%) !important;
+  // position: fixed;
 
   .header-container {
     height: 80px;
@@ -16,7 +17,27 @@
       }
     }
 
-    .sidenav {
+    .sidenav-mobile {
+      .sidenav-container {
+        height: 100%;
+      }
+
+      .sidenav {
+        width: 200px;
+      }
+
+      .sidenav .mat-toolbar {
+        background: inherit;
+      }
+
+      .mat-toolbar.mat-primary {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+    }
+
+    .main-title {
       width: 255px !important;
 
       .title {
