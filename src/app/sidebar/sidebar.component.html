@@ -112,11 +112,19 @@
             </li>
             <div *ngIf="subdata.name === name">
               <div #next class="next" *ngFor="let data of subdata.next">
-                <a>
+                <a (click)="opensublist(subdata.name)">
                   {{data}}
                 </a>
+                </div>
+                <div *ngIf="subdata.subqty === true"> 
+                  <div #next class="next" *ngFor="let data of subdata.li">
+                  <a>
+                    {{data}}
+                  </a>
+                </div>
               </div>
             </div>
+
           </div>
         </ul>
       </div>

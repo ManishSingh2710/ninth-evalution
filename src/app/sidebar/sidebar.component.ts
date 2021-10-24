@@ -9,6 +9,8 @@ export class SidebarComponent implements OnInit {
 
   previousId = 1;
   name = "";
+  sublist = false;
+  sublistname ="";
   listData: ListType[] = [
     {
       listId: 1,
@@ -37,7 +39,15 @@ export class SidebarComponent implements OnInit {
             "Calender",
             "Shop"
           ],
-          iconurl: "fa fa-mobile"
+          iconurl: "fa fa-mobile",
+          subqty: true,
+          li: [
+            "Product Grid",
+            "Product List",
+            "Product Details",
+            "Invoice",
+            "Orders"
+          ]
         },
         {
           name: "Charts",
@@ -127,7 +137,8 @@ export class SidebarComponent implements OnInit {
             "Pickers",
             "Jquey Validate"
           ],
-          iconurl: "fa fa-wpforms"
+          iconurl: "fa fa-wpforms",
+
         },
       ],
     },
@@ -216,6 +227,14 @@ export class SidebarComponent implements OnInit {
     else
       this.name = value;
   }
+
+  opensublist(value){
+    if (this.sublistname == value)
+      this.sublistname = "";
+    else
+      this.sublistname = value;
+    this.sublist = true;
+  }
 }
 
 
@@ -230,5 +249,7 @@ export type SubListType = {
   name: string,
   qty: number,
   next: string[],
-  iconurl?: string
+  iconurl?: string,
+  subqty?: boolean;
+  li?: string[]
 }

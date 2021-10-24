@@ -41,6 +41,8 @@
     .side-content {
       height: calc(100% - 80px);
       width: 255px;
+      background-color: white;
+    overflow-y: scroll;
 
       .selected-panel {
 
